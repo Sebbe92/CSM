@@ -2,6 +2,8 @@ h1 {
   font-family: roboto-slab, serif;
   font-weight: 700;
   font-style: normal;
+  color: #ff8c1a;
+  border: 2px black;
 }
 h2 {
   font-family: lust-display, serif;
