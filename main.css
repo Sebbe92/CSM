@@ -3,7 +3,8 @@ h1 {
   font-weight: 700;
   font-style: normal;
   color: #ff8c1a;
-  border: 2px black solid;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
 }
 h2 {
   font-family: lust-display, serif;
