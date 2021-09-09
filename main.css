@@ -1,12 +1,22 @@
+/*variables*/
+:root {
+  --bg-color: #e5eef6;
+  --main-color: #ff8c1a;
+  --sec-color: #59cdf0;
+  --third-color: #1c83a3;
+  --font-color: black;
+  --border-color: gray;
+}
+/*GLOBAL styles*/
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+}
 h1 {
   font-family: roboto-slab, serif;
   font-weight: 700;
   font-style: normal;
   color: #ff8c1a;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-  font-size: 5em;
-  margin: 0;
 }
 h2 {
   font-family: lust-display, serif;
@@ -22,13 +32,15 @@ p {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: var(--font-color);
 }
+/*HEADER SPECIFIC styles*/
 header {
   background-image: url(/Images/header_background.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding: 10px;
 }
 .nav_grid_container {
   display: grid;
@@ -38,20 +50,21 @@ header ul {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
+  background-color: var(--main-color);
 }
-header nav li a:hover {
+header nav a:hover {
+  /*animation*/
   text-decoration: underline;
 }
-header li {
-  height: fit-content;
-  width: fit-content;
-  background-color: #59ccf0;
-  padding: 5px;
-}
 .nav_cta {
-  font-family: roboto mono, serif;
+  font-family: roboto, serif;
+  font-weight: bold;
   text-decoration: none;
   font-size: 3em;
+  border: var(--border-color) 1px solid;
+  background-color: var(--sec-color);
+  padding: 5px 15px;
+  border-radius: 5px;
 }
 .home_logo_button {
   display: grid;
@@ -62,21 +75,25 @@ header li {
   display: grid;
   align-items: center;
 }
+.logo_text {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--font-color);
+  font-size: 5em;
+  margin: 0;
+}
 .main_logo {
   display: grid;
   align-items: center;
   justify-content: start;
-  background: linear-gradient(to bottom right, #1c83a3, #59cdf08c);
+  background: linear-gradient(to bottom right, #1c83a3d7, #59cdf08c);
   margin-bottom: 20px;
   padding: 10px;
+  border-radius: 5px;
 }
 .main_logo svg {
   width: 90px;
 }
-.home_logo_button {
-  margin: 0;
-  padding: 0%;
-}
+/*GLOBAL WIDGETS*/
 .grid_container {
   display: grid;
   grid-template-columns: 20% 30% 40%;
@@ -89,5 +106,5 @@ header li {
   padding: 25px;
   background-color: white;
   border-radius: 20px;
-  border: black 2px solid;
+  border: var(--border-color) 1px solid;
 }
