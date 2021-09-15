@@ -156,10 +156,15 @@ img {
 .content_section {
   display: flex;
   flex-wrap: wrap;
-  background-color: #1c83a3;
+  margin-left: 10%;
 }
 .info_section {
-  background-color: red;
+  max-width: 500px;
+  height: fit-content;
+  padding: 50px;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 .sticky_item {
   position: sticky;
@@ -195,4 +200,26 @@ img {
 }
 .content_block:hover .content_block_overlay {
   height: 100%;
+}
+.opening_hours {
+  grid-area: hours;
+
+  text-align: center;
+}
+.admission {
+  grid-area: admission;
+}
+.accessibility {
+  grid-area: accessibility;
+}
+.info_section svg {
+  grid-area: icon;
+  width: 100%;
+}
+.grid_area_container {
+  display: grid;
+  grid-template-areas:
+    "icon icon"
+    "hours admission"
+    "hours accessibility";
 }
