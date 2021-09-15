@@ -7,24 +7,28 @@
   --font-color: black;
   --border-color: #707070;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /*GLOBAL styles*/
 html {
   background: url(images/lab-512503_1920-cut.jpg),
     url(Images/roberto-nickson-396152.jpg);
+  background-color: var(--bg-color);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: contain, cover;
-  background-position: 100% 105%, 100% 75%;
+  background-size: auto, auto;
+  background-position: 100% 107%, 40% 65%;
 }
-body {
-  margin: 0;
-}
+
 h1 {
   font-family: roboto-slab, serif;
   font-weight: 700;
   font-style: normal;
-  color: #ff8c1a;
-  font-size: 5em;
+  color: white;
+  font-size: 8vw;
   margin: 0%;
 }
 h2 {
@@ -110,12 +114,11 @@ li a {
 .home_cta_logo h2 {
   margin-top: -15px;
 }
-.logo_text {
+.logo_h1 {
+  color: #ff8c1a;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--font-color);
   font-size: 4.5em;
-  margin: 0;
-  padding: 0%;
   text-align: center;
   align-items: center;
 }
@@ -123,17 +126,19 @@ li a {
 /*GLOBAL WIDGETS*/
 
 footer {
-  margin-top: 280px;
+  margin-top: 30vh;
   height: 90px;
   background-color: gray;
 }
 .background_overlay {
   background-color: rgba(255, 255, 255, 0.152);
-  height: 400px;
-  text-align: center;
+  height: 40vh;
   backdrop-filter: blur(1px);
   backdrop-filter: brightness(20%);
+  text-align: center;
 }
+
 .main_section {
   height: 2000px;
+  background-color: white;
 }
