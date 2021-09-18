@@ -2,7 +2,7 @@
 :root {
   --bg-color: #e5eef6;
   --main-color: #ff8c1a;
-  --sec-color: #59cdf0;
+  --sec-color: #59cdf0e7;
   --third-color: #1c83a3;
   --font-color: black;
   --border-color: #707070;
@@ -13,16 +13,16 @@
   box-sizing: border-box;
 }
 
-/*GLOBAL styles*/
+/*background*/
 html {
   background: url(Images/roberto-nickson-396152.jpg);
   background-color: var(--bg-color);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  background-position: 70% 75%;
 }
-
+/*GLOBAL styles*/
 h1 {
   font-family: roboto-slab, serif;
   font-weight: 700;
@@ -33,7 +33,7 @@ h1 {
 }
 h2 {
   font-family: roboto, serif;
-  font-size: 3em;
+  font-size: 2em;
   font-style: bold;
   text-transform: capitalize;
 }
@@ -49,7 +49,7 @@ p {
   font-family: roboto mono, serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 0.8em;
+  font-size: 1.5em;
 }
 .background_overlay p {
   font-size: 3vw;
@@ -60,18 +60,18 @@ a {
 }
 /*HEADER SPECIFIC styles*/
 header {
-  height: 130px;
+  height: fit-content;
   background-color: white;
   display: flex;
   justify-content: start;
   align-items: center;
-  margin: 0%;
+  padding: 5px;
 }
 header ul {
   width: 100%;
   display: inline-block;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   list-style: none;
+  margin-left: 20px;
 }
 nav a {
   border: white 2px solid;
@@ -102,34 +102,58 @@ li a {
   width: 136px;
   padding: 10px 0px;
 }
+.hamburger_menu {
+  display: none;
+}
+.hamburger_menu_overlay {
+  position: absolute;
+  top: 100px;
+  left: 0%;
+  background-color: #1c83a3;
+  z-index: 10;
+  display: none;
+  text-align: center;
+}
+.hamburger_menu svg {
+  margin: 10px;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked ~ .hamburger_menu_overlay {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 /*logo*/
 .home_cta_logo {
   margin-left: 10px;
-  min-width: 250px;
-  padding: 0%;
+  width: 250px;
 }
 .main_logo {
   display: grid;
   grid-template-columns: 70% 30%;
   justify-content: center;
   align-items: center;
-  margin-top: -15px;
-  padding: 0%;
 }
-.main_logo svg {
-  width: 70px;
-}
-.home_cta_logo h2 {
+
+.home_cta_logo h3 {
   margin-top: -15px;
+  font-size: 1em;
 }
 .logo_h1 {
-  color: #ff8c1a;
+  color: var(--main-color);
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--font-color);
-  font-size: 4.5em;
+  font-size: 4em;
   text-align: center;
   align-items: center;
+  width: 100%;
+  height: fit-content;
+}
+.home_cta_logo svg {
+  width: 100%;
+  height: fit-content;
 }
 
 /*GLOBAL WIDGETS*/
@@ -137,7 +161,7 @@ li a {
   font-size: 2em;
 }
 footer {
-  background-color: #707070;
+  background-color: white;
   z-index: 2;
   display: flex;
   flex-wrap: wrap;
@@ -150,11 +174,15 @@ img {
 .background_overlay {
   background-color: rgba(255, 255, 255, 0.152);
   height: fit-content;
-
+  min-height: 150px;
   backdrop-filter: blur(1px);
   backdrop-filter: brightness(20%);
   display: flex;
   justify-content: center;
+  text-align: center;
+}
+.background_overlay p {
+  color: white;
 }
 
 .main_section {
@@ -162,17 +190,20 @@ img {
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding-bottom: 50px;
 }
 
 .content_section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1100px;
+  max-width: 1300px;
   min-width: 900px;
   padding: 5px;
   gap: 10px;
+  height: fit-content;
 }
 
 .info_section {
@@ -185,6 +216,8 @@ img {
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 100%;
+  overflow: auto;
 }
 
 .sticky_item {
@@ -213,7 +246,7 @@ img {
   height: 70px;
   width: 100%;
   position: absolute;
-  bottom: 0%;
+  bottom: 0;
   text-align: center;
   background-color: #ffffff87;
   overflow: hidden;
@@ -232,26 +265,83 @@ img {
   grid-area: icon;
   width: 100%;
 }
-.grid_area_container {
+.info_container {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
+  padding-top: 40px;
 }
-.grid_area_container p {
+.info_container p {
   width: 15ch;
 }
-.flex_item {
-  display: grid;
-  grid-template-columns: 1fr;
-  flex-wrap: wrap;
-  overflow: hidden;
-  justify-content: center;
+
+/*new anim*/
+.container {
   text-align: center;
+  max-width: 400px;
+  overflow: hidden;
+  transition: 350ms ease-out;
+  height: 250px;
 }
-.opening_hours p {
-  width: 15ch;
+.item {
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  height: 80%;
+  transition: 350ms ease-out 650ms;
 }
+
+.item img {
+  width: 100%;
+}
+.item_overlay {
+  transition: transform 350ms ease-out 300ms;
+  position: absolute;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--sec-color);
+  overflow: hidden;
+  border-top: 0;
+  border-bottom: black 3px solid;
+}
+
+.item_bottom_text {
+  transition: transform 250ms ease-out;
+  z-index: 2;
+  border: black 2px solid;
+  height: fit-content;
+}
+
+.container:hover .item_overlay {
+  transform: translateY(100%);
+}
+.container:hover .item_bottom_text {
+  transform: translateY(-100%);
+}
+.container:hover {
+  animation: img_bounce 350ms ease-out;
+}
+.container:hover .item {
+  height: 100%;
+}
+.container:hover {
+}
+
+/**/
+@keyframes img_bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 @media (max-width: 920px) {
   .content_block {
     flex: 0 0 100%;
@@ -263,9 +353,37 @@ img {
   .info_section {
     min-width: 200px;
   }
+  header nav {
+    display: none;
+  }
+  .hamburger_menu {
+    display: block;
+  }
 }
 @media (max-width: 500px) {
-  h2 {
+  .home_cta_logo {
+    width: 50%;
+    height: 100%;
+  }
+  .main_logo {
+    width: 160px;
+    font-size: small;
+    float: right;
+  }
+  .home_cta_logo h3 {
+    display: none;
+  }
+  .content_block h2 {
     font-size: 10vw;
+  }
+  .content_block {
+    max-height: 200px;
+  }
+  .main_section {
+    padding: 0;
+  }
+  .container {
+    max-width: 100%;
+    overflow: hidden;
   }
 }
