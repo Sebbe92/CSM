@@ -22,18 +22,13 @@ body {
   background-size: cover;
   background-position: 70% 75%;
 }
-.background_overlay p {
-  font-size: 1em;
-}
+
 .background_overlay {
   background-color: rgba(255, 255, 255, 0.152);
   height: fit-content;
   min-height: 100px;
   backdrop-filter: blur(1px);
   backdrop-filter: brightness(20%);
-  display: flex;
-  justify-content: center;
-  text-align: center;
 }
 /*GLOBAL styles*/
 h1 {
@@ -42,13 +37,17 @@ h1 {
   font-style: normal;
   color: white;
   font-size: 7vw;
-  margin: 0%;
+  padding: 50px 0;
+  text-transform: capitalize;
+  text-align: center;
 }
 h2 {
   font-family: roboto, serif;
-  font-size: 2em;
+  font-size: 3vw;
   font-style: bold;
-  text-transform: capitalize;
+  margin-bottom: 50px;
+  text-align: center;
+  white-space: nowrap;
 }
 h3 {
   font-family: roboto, serif;
@@ -57,12 +56,13 @@ h3 {
   margin: 0;
   font-size: 1em;
   text-transform: capitalize;
+  text-align: center;
 }
 p {
   font-family: roboto mono, serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.25em;
+  font-size: 0.6em;
 }
 
 a {
@@ -116,6 +116,7 @@ li a {
   display: none;
 }
 .hamburger_menu_overlay {
+  width: 120px;
   position: absolute;
   top: 100px;
   left: 0%;
@@ -163,43 +164,75 @@ input[type="checkbox"]:checked ~ .hamburger_menu_overlay {
 }
 .home_cta_logo svg {
   width: 100%;
-  height: fit-content;
+  max-height: 70px;
 }
 
 /*GLOBAL WIDGETS*/
 
 img {
   width: 100%;
-  display: block;
 }
 
 .background_overlay p {
+  font-size: 1em;
   color: white;
+  text-align: center;
+  padding: 30px;
 }
 
-.main_section {
-  background-color: white;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 10px;
-  padding-bottom: 50px;
-}
 /*content section*/
 .content_section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 5px;
+  width: 100%;
+  height: 63vw;
   gap: 15px;
+  display: flex;
+  justify-content: start;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
 }
+.content_section h2 {
+  font-size: 6vw;
+}
+/* container backgrounds*/
+.container_background_1 {
+  background-image: url(/Images/andrew-ruiz-348421.jpg);
+  background-size: cover;
+}
+.container_background_1 {
+  background-image: url(/Images/mavis-cw-164128.jpg);
+  background-size: cover;
+}
+.container_background_2 {
+  background-image: url(/Images/billetto-editorial-334686.jpg);
+  background-size: cover;
+}
+.container_background_3 {
+  background-image: url(/Images/roberto-nickson-396152.jpg);
+  background-size: cover;
+}
+.container_background_4 {
+  background-image: url(/Images/people-219985_1280.jpg);
+  background-size: cover;
+}
+.container_background_5 {
+  background-image: url(/Images/people-219985_1280.jpg);
+  background-size: cover;
+}
+.container_background_6 {
+  background-image: url(/Images/people-219985_1280.jpg);
+  background-size: cover;
+}
+
 .container {
+  width: 60vw;
+  height: 60vw;
   text-align: center;
-  max-width: 400px;
-  overflow: hidden;
+  scroll-snap-align: center;
+  flex: none;
   transition: 250ms ease-out;
   max-height: 250px;
+  border-radius: 50px;
 }
 .item {
   overflow: hidden;
@@ -208,9 +241,14 @@ img {
   height: 80%;
   transition: 190ms linear 500ms;
 }
-
+.img_frame {
+  width: 70vw;
+  height: 70vw;
+}
 .item img {
-  width: 100%;
+  display: none;
+  width: 60vw;
+  height: 50vw;
 }
 .item_overlay {
   transition: transform 250ms linear 300ms;
@@ -230,7 +268,6 @@ img {
 .item_bottom_text {
   transition: transform 150ms ease-out;
   z-index: 2;
-  border: black 2px solid;
   height: fit-content;
 }
 /*info section*/
@@ -239,24 +276,14 @@ img {
   flex-wrap: wrap;
   width: 100%;
   height: fit-content;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: auto;
+  justify-content: space-between;
   margin: 40px;
 }
-.info_container {
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
-  width: 100%;
-  border: var(--main-color) 2px solid;
-  padding: 40px;
+.info_section svg {
+  margin: 0 auto;
 }
-.info_container p {
-  max-width: 30ch;
+.info_section p {
+  max-width: 25ch;
 }
 .google_map {
 }
@@ -279,11 +306,7 @@ footer {
   width: 100%;
   z-index: -1;
 }
-.centered_container {
-  height: fit-content;
-  width: fit-content;
-  text-align: center;
-}
+
 /**/
 @keyframes img_bounce {
   0% {
@@ -298,13 +321,12 @@ footer {
 }
 
 @media (max-width: 920px) {
+  .main_section {
+    padding: 10px;
+  }
   .content_block {
     flex: 0 0 100%;
     min-width: 100px;
-  }
-  .content_section {
-    max-width: 100%;
-    min-width: 0;
   }
   header nav {
     display: none;
@@ -313,21 +335,18 @@ footer {
     display: block;
   }
   h1 {
-    font-size: 3.5em;
+    font-size: 15vw;
+  }
+  .home_cta_logo {
+    width: 220px;
+    height: 100%;
+    margin-left: auto;
   }
 }
 @media (max-width: 500px) {
-  h1 {
-    font-size: 10vw;
-  }
-  .home_cta_logo {
-    width: 50%;
-    height: 100%;
-  }
   .main_logo {
     width: 160px;
-    font-size: small;
-    float: right;
+    font-size: 1em;
   }
   .home_cta_logo h3 {
     display: none;
@@ -338,9 +357,6 @@ footer {
   .content_block {
     max-height: 200px;
   }
-  .container {
-    width: 100%;
-  }
   .info_container p {
     width: 100%;
   }
@@ -350,18 +366,41 @@ footer {
   .google_map {
     display: none;
   }
+  .info_section {
+    padding: 5px;
+    text-align: start;
+    background-color: red;
+  }
 }
-@media (min-width: 350px) {
+@media (min-width: 500px) {
+  .content_section {
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .content_section h2 {
+    font-size: 2em;
+  }
+  .container {
+    max-width: 400px;
+  }
+  .content_section {
+    overflow: hidden;
+    height: fit-content;
+  }
+  .item img {
+    max-width: 400px;
+    height: fit-content;
+  }
   .container:hover .item_overlay {
     transform: translateY(100%);
   }
   .container:hover .item_bottom_text {
-    transform: translateY(-100%);
+    transform: translateY(-200%);
   }
   .container:hover {
     animation: img_bounce 350ms ease-out;
   }
-  .container:hover .item {
-    height: 100%;
-  }
+}
+@media (min-width: 350px) {
 }
