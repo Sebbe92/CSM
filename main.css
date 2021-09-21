@@ -26,7 +26,7 @@ body {
 .background_overlay {
   background-color: rgba(255, 255, 255, 0.152);
   height: fit-content;
-  min-height: 100px;
+  padding: 50px 0;
   backdrop-filter: blur(1px);
   backdrop-filter: brightness(20%);
 }
@@ -37,7 +37,7 @@ h1 {
   font-style: normal;
   color: white;
   font-size: 7vw;
-  padding: 50px 0;
+
   text-transform: capitalize;
   text-align: center;
 }
@@ -71,7 +71,6 @@ a {
 }
 /*HEADER SPECIFIC styles*/
 header {
-  height: fit-content;
   background-color: white;
   display: flex;
   justify-content: start;
