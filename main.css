@@ -458,10 +458,15 @@ footer .nav_cta {
     position: relative;
     text-align: center;
   }
+  .content_section {
+    gap: 0;
+  }
+  .container {
+    margin: 0 20px;
+  }
 }
 @media (min-width: 500px) {
   .content_section {
-    margin: 10px 0 !important;
     flex: 1;
     flex-wrap: wrap;
     justify-content: center;
