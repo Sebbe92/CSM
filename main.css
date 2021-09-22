@@ -461,7 +461,7 @@ footer .nav_cta {
 }
 @media (min-width: 500px) {
   .content_section {
-    margin: 10px 0;
+    margin: 10px 0 !important;
     flex: 1;
     flex-wrap: wrap;
     justify-content: center;
