@@ -13,41 +13,32 @@
   box-sizing: border-box;
 }
 
-/*background & bakcground overlay*/
-body {
-  background: url(Images/roberto-nickson-396152.jpg);
-  background-color: var(--bg-color);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: 70% 75%;
-}
-
-.background_overlay {
-  background-color: rgba(255, 255, 255, 0.152);
-  height: fit-content;
-  padding: 50px 0;
-  backdrop-filter: blur(1px);
-  backdrop-filter: brightness(20%);
-}
 /*GLOBAL styles*/
 h1 {
   font-family: roboto-slab, serif;
   font-weight: 700;
   font-style: normal;
   color: white;
-  font-size: 7vw;
-
+  font-size: 10vw;
   text-transform: capitalize;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.logo_h1 {
+  color: var(--main-color);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--font-color);
+  font-size: 4em;
+  background-color: white;
 }
 h2 {
   font-family: roboto, serif;
-  font-size: 3vw;
+  font-size: 2em;
   font-style: bold;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   text-align: center;
   white-space: nowrap;
+  text-transform: capitalize;
 }
 h3 {
   font-family: roboto, serif;
@@ -63,15 +54,45 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: 0.6em;
+  margin: 10px;
+  word-break: break-word;
 }
 
 a {
   text-decoration: none;
   color: var(--font-color);
 }
+/*BACKGROUND*/
+body {
+  background: url(Images/roberto-nickson-396152.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 70% 75%;
+}
+.main_section,
+.main_exhibition_section,
+.background_overlay p,
+header,
+.hamburger_menu_overlay {
+  background-color: white;
+}
+
+.background_overlay {
+  background-color: rgba(255, 255, 255, 0.152);
+  height: fit-content;
+  padding: 50px 0;
+  backdrop-filter: blur(1px);
+  backdrop-filter: brightness(20%);
+}
+.background_overlay p {
+  font-size: 1em;
+  text-align: center;
+  padding: 30px;
+}
 /*HEADER SPECIFIC styles*/
 header {
-  background-color: white;
+  height: 120px;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -83,14 +104,14 @@ header ul {
   list-style: none;
   margin-left: 20px;
 }
-nav a {
+header a {
   border: white 2px solid;
   border-radius: 4px;
   transition-duration: 300ms;
   transition-property: border;
   transition-timing-function: ease-out;
 }
-header nav a:hover {
+header a:hover {
   border: var(--border-color) 2px solid;
 }
 .nav_cta {
@@ -115,14 +136,14 @@ li a {
   display: none;
 }
 .hamburger_menu_overlay {
-  width: 120px;
+  width: 200px;
+
   position: absolute;
   top: 100px;
   left: 0%;
-  background-color: #1c83a3;
-  z-index: 10;
-  display: none;
-  text-align: center;
+  opacity: 0;
+  transition: opacity 200ms ease-out, transform 200ms ease-out;
+  transform: translateY(-10px);
 }
 .hamburger_menu svg {
   margin: 10px;
@@ -131,18 +152,18 @@ input[type="checkbox"] {
   display: none;
 }
 input[type="checkbox"]:checked ~ .hamburger_menu_overlay {
-  display: flex;
-  flex-wrap: wrap;
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 10;
 }
 
 /*logo*/
 .home_cta_logo {
-  margin-left: 10px;
-  width: 250px;
+  width: fit-content;
 }
 .main_logo {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 60% 40%;
   justify-content: center;
   align-items: center;
 }
@@ -151,87 +172,80 @@ input[type="checkbox"]:checked ~ .hamburger_menu_overlay {
   margin-top: -15px;
   font-size: 1em;
 }
-.logo_h1 {
-  color: var(--main-color);
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--font-color);
-  font-size: 4em;
-  text-align: center;
-  align-items: center;
-  width: 100%;
-  height: fit-content;
-}
+
 .home_cta_logo svg {
-  width: 100%;
-  max-height: 70px;
+  width: 90%;
 }
 
 /*GLOBAL WIDGETS*/
-
-img {
+.main_section,
+.main_exhibition_section {
+  background-color: rgb(255, 255, 255);
   width: 100%;
-}
-
-.background_overlay p {
-  font-size: 1em;
-  color: white;
-  text-align: center;
-  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  padding-bottom: 50px;
 }
 
 /*content section*/
 .content_section {
+  padding: 10px;
+  max-width: 1400px;
   width: 100%;
-  height: 63vw;
-  gap: 15px;
+  height: 70vw;
+  gap: 50px;
   display: flex;
   justify-content: start;
-  overflow-x: scroll;
-  overflow-y: hidden;
   scroll-snap-type: x mandatory;
 }
 .content_section h2 {
   font-size: 6vw;
 }
 /* container backgrounds*/
+
 .container_background_1 {
-  background-image: url(/Images/andrew-ruiz-348421.jpg);
+  background-image: url(/Images/exhibition-1863344_1920.jpg);
   background-size: cover;
-}
-.container_background_1 {
-  background-image: url(/Images/mavis-cw-164128.jpg);
-  background-size: cover;
+  background-position: center;
 }
 .container_background_2 {
   background-image: url(/Images/billetto-editorial-334686.jpg);
   background-size: cover;
+  background-position: top center;
 }
 .container_background_3 {
   background-image: url(/Images/roberto-nickson-396152.jpg);
   background-size: cover;
+  background-position: center;
 }
 .container_background_4 {
-  background-image: url(/Images/people-219985_1280.jpg);
+  background-image: url(/Images/teacher-2816112.jpg);
   background-size: cover;
+  background-position: top center;
 }
 .container_background_5 {
   background-image: url(/Images/people-219985_1280.jpg);
   background-size: cover;
+  background-position: center;
 }
 .container_background_6 {
-  background-image: url(/Images/people-219985_1280.jpg);
+  background-image: url(/Images/pexels-ksenia-chernaya-3951751.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 .container {
   width: 60vw;
   height: 60vw;
-  text-align: center;
+  max-height: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.597);
+  border-radius: 5px;
   scroll-snap-align: center;
   flex: none;
   transition: 250ms ease-out;
-  max-height: 250px;
-  border-radius: 50px;
+  overflow: hidden;
 }
 .item {
   overflow: hidden;
@@ -240,30 +254,23 @@ img {
   height: 80%;
   transition: 190ms linear 500ms;
 }
-.img_frame {
-  width: 70vw;
-  height: 70vw;
-}
-.item img {
-  display: none;
-  width: 60vw;
-  height: 50vw;
-}
+
 .item_overlay {
-  transition: transform 250ms linear 300ms;
   position: absolute;
   top: -100%;
   width: 100%;
   height: 100%;
   background-color: white;
   overflow: hidden;
-  padding-top: auto;
-  border: black 2px solid;
+  transition: transform 250ms linear 300ms;
 }
 .item_overlay h2 {
-  margin: 10px;
+  margin-bottom: 25px;
 }
-
+.item_overlay p {
+  max-width: 80%;
+  margin: 0 auto;
+}
 .item_bottom_text {
   transition: transform 150ms ease-out;
   z-index: 2;
@@ -283,8 +290,35 @@ img {
 }
 .info_section p {
   max-width: 25ch;
+  font-size: 1em;
 }
 .google_map {
+}
+/*exhibition*/
+.main_exhibition_section :nth-child(even) {
+  flex-direction: row-reverse;
+}
+.exhibition_container {
+  max-height: 400px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.597);
+  background-color: white;
+  margin: 30px 20px;
+}
+.exhibition_container img {
+  flex: 1;
+  min-width: 50%;
+  object-fit: fill;
+  background-color: black;
+}
+.info_box {
+  padding: 10px;
+}
+.info_box p {
+  font-size: 1em;
 }
 
 /* footer */
@@ -300,10 +334,12 @@ footer {
 }
 .sticky_item {
   position: sticky;
-  top: 500px;
   bottom: 0;
   width: 100%;
   z-index: -1;
+}
+.sticky_item img {
+  width: 100%;
 }
 
 /**/
@@ -320,41 +356,48 @@ footer {
 }
 
 @media (max-width: 920px) {
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }
   .main_section {
-    padding: 10px;
+    padding: 0;
   }
-  .content_block {
-    flex: 0 0 100%;
-    min-width: 100px;
-  }
+
   header nav {
     display: none;
   }
   .hamburger_menu {
     display: block;
   }
-  h1 {
-    font-size: 15vw;
-  }
+
   .home_cta_logo {
-    width: 220px;
-    height: 100%;
     margin-left: auto;
+  }
+  .exhibition_container img {
+    max-width: 100%;
+  }
+  .exhibition_container p {
+    font-size: 0.8em;
+  }
+  .exhibition_container {
+    display: grid;
+    height: fit-content;
+    max-height: 700px;
+    width: 300px;
   }
 }
 @media (max-width: 500px) {
-  .main_logo {
-    width: 160px;
-    font-size: 1em;
-  }
+  .home_cta_logo h1,
   .home_cta_logo h3 {
     display: none;
   }
-  .content_block h2 {
-    font-size: 10vw;
+  .container h2 {
+    font-size: 1.6em;
   }
-  .content_block {
-    max-height: 200px;
+  .content_section {
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
   .info_container p {
     width: 100%;
@@ -369,6 +412,9 @@ footer {
     padding: 5px;
     text-align: start;
     background-color: red;
+  }
+  h2 {
+    font-size: 5vw;
   }
 }
 @media (min-width: 500px) {
@@ -387,10 +433,7 @@ footer {
     overflow: hidden;
     height: fit-content;
   }
-  .item img {
-    max-width: 400px;
-    height: fit-content;
-  }
+
   .container:hover .item_overlay {
     transform: translateY(100%);
   }
