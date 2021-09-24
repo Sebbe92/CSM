@@ -33,10 +33,14 @@ h2 {
   font-family: roboto, serif;
   font-size: 2em;
   font-style: bold;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   text-align: center;
   white-space: nowrap;
   text-transform: capitalize;
+}
+.extra_big {
+  font-family: roboto-slab, serif;
+  font-size: 3em;
 }
 h3,
 label {
@@ -53,7 +57,7 @@ textarea {
   font-style: normal;
   font-size: 1em;
   padding: 10px;
-  word-break: break-word;
+  border-left: 2px black solid;
 }
 .background_overlay p {
   color: white;
@@ -63,15 +67,24 @@ a {
   text-decoration: none;
   color: var(--font-color);
 }
+.event_info_box a {
+  font-family: roboto, serif;
+  font-size: 2em;
+  font-style: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
 /*BACKGROUND*/
 body {
   background: url(Images/roberto-nickson-396152.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: 70% 75%;
+  background-position: 50% 75%;
 }
-h1,
+.background_overlay h1,
 .background_overlay p {
   background-color: rgba(0, 0, 0, 0.576);
 }
@@ -82,13 +95,14 @@ header,
 .hamburger_menu_overlay,
 .logo_h1,
 .aboutus_main_section,
-.event_info_box {
+.event_info_box,
+.article_main_section,
+.main_getinvolved_section {
   background-color: white;
 }
-/* WHITE*/
+
 .background_overlay {
   height: fit-content;
-  max-height: 50vh;
   padding: 50px 0;
   background-color: rgba(255, 255, 255, 0.152);
   backdrop-filter: blur(1px);
@@ -216,6 +230,7 @@ input[type="checkbox"]:checked ~ .hamburger_menu_overlay {
   width: 60vw;
   height: 60vw;
   max-height: 250px;
+  max-width: 350px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.597);
   border-radius: 5px;
   scroll-snap-align: center;
@@ -386,29 +401,39 @@ input[type="checkbox"]:checked ~ .hamburger_menu_overlay {
 }
 /*about us section*/
 .aboutus_main_section {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  justify-content: space-between;
 }
-.aboutus_section {
-  min-width: 500px;
+.explore_together_section p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.explore_together_section,
+.explore_section,
+.general_info_section {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.597);
   padding: 20px;
-  background-color: gray;
+  margin: 20px;
 }
-.main_aboutus_right {
-  padding: 10px;
-  width: 480px;
+.split {
+  display: flex;
 }
-.location_section {
-  text-align: center;
-  background-color: blue;
+.explore_section {
 }
 .general_info_section {
-  background-color: #59cdf0;
 }
-
+.aboutus_main_section .img_frame {
+  height: 300px;
+  overflow: hidden;
+}
+.aboutus_main_section .img_frame img {
+  width: 100%;
+  object-fit: contain;
+  object-position: 0 -500px;
+}
+/*about us FORM*/
 .contact_form {
-  width: 80%;
+  width: 90%;
+  max-width: 500px;
+
   background-color: var(--sec-color);
   border-radius: 30px;
   padding: 20px;
@@ -439,7 +464,41 @@ form div {
   width: 100%;
   resize: none;
 }
-
+/*article*/
+.article_main_section {
+  height: 1200px;
+  padding: 10px;
+}
+.main_article {
+  margin: 20px;
+  padding: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.597);
+  display: flex;
+  flex-wrap: wrap;
+}
+.main_article .img_frame {
+  width: 30%;
+  overflow: hidden;
+  min-width: 450px;
+}
+.main_article .img_frame img {
+  width: 100%;
+  object-fit: contain;
+}
+.article_text {
+  width: 55%;
+  min-width: 450px;
+}
+.article_h1 {
+  font-size: 3em;
+  color: black;
+  background-color: white;
+}
+/*get involved*/
+.main_getinvolved_section {
+  display: flex;
+  justify-content: space-around;
+}
 /* footer */
 .sticky_item {
   position: sticky;
@@ -485,6 +544,13 @@ footer .nav_cta {
   h2 {
     font-size: 1.5em;
     margin-bottom: 5px;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  p {
+    font-size: 00.8em;
+    margin-bottom: 20px;
   }
   .main_section {
     padding: 0;
@@ -532,17 +598,29 @@ footer .nav_cta {
   .google_map {
     max-width: 100%;
   }
+  .split {
+    flex-wrap: wrap;
+  }
+  .aboutus_main_section .img_frame img {
+    object-position: 0 -200px;
+  }
 }
 @media (max-width: 500px) {
   .home_cta_logo h1,
   .home_cta_logo h3 {
     display: none;
   }
+  .home_cta_logo {
+    width: fit-content;
+  }
   .container h2 {
     font-size: 1.6em;
   }
   h2 {
     font-size: 5vw;
+  }
+  .extra_big {
+    font-size: 10vw;
   }
   .home_cta_logo {
     margin: auto;
@@ -569,10 +647,20 @@ footer .nav_cta {
   .container {
     margin: 0 10px;
   }
-  .location_section,
-  .general_info_section,
-  .aboutus_section {
-    min-width: 98%;
+  .contact_form {
+    width: 100%;
+  }
+
+  .aboutus_main_section .img_frame img {
+    object-position: 0 0;
+  }
+}
+@media (max-width: 350px) {
+  .hamburger_menu_overlay ul {
+    width: 100%;
+  }
+  .google_map {
+    display: none;
   }
 }
 @media (min-width: 500px) {
@@ -584,9 +672,7 @@ footer .nav_cta {
   .content_section h2 {
     font-size: 2em;
   }
-  .container {
-    max-width: 400px;
-  }
+
   .content_section {
     overflow: hidden;
     height: fit-content;
@@ -600,10 +686,5 @@ footer .nav_cta {
   }
   .container:hover {
     animation: img_bounce 350ms ease-out;
-  }
-}
-@media (max-width: 350px) {
-  .hamburger_menu_overlay ul {
-    width: 100%;
   }
 }

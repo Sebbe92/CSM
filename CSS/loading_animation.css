@@ -1,0 +1,155 @@
+/*.container {
+  width: 500px;
+  height: 500px;
+  z-index: -2;
+}
+div {
+  border-radius: 50%;
+  border: 10px blue solid;
+  padding: 10px;
+}
+body:nth-child(odd) {
+  border: 10px white solid;
+}
+
+.line_1 {
+  z-index: -1;
+}
+.line_2 {
+  z-index: 2;
+}
+.line_3 {
+  z-index: 3;
+}
+.line_4 {
+  z-index: 4;
+}
+.line_5 {
+  z-index: 5;
+}
+.line_6 {
+  z-index: 6;
+}
+.line_7 {
+  z-index: 7;
+}
+.line_8 {
+  z-index: 8;
+}
+.line_9 {
+  z-index: 9;
+}
+.line_10 {
+  z-index: 10;
+}
+*/
+/*
+div {
+  padding: 20px;
+
+  border-radius: 100%;
+  border-top: blue 15px solid;
+  border-bottom: blue 15px solid;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+<div class="container">
+      <div class="line_1">
+        <div class="line_2">
+          <div class="line_3">
+            <div class="line_4">
+              <div class="line_5">
+                <div class="line_6">
+                  <div class="line_7">
+                    <div class="line_8">
+                      <div class="line_9">
+                        <div class="line_10"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+*/
+/*
+svg {
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+div {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  background-color: aqua;
+}
+.svg1 {
+  z-index: 11;
+  top: 47.5%;
+  left: 47.5%;
+  width: 500px;
+  height: 500px;
+
+  /*animation: rotate1 2s 300ms infinite;
+  animation-delay: 1s;
+}
+.svg2 {
+  animation: rotate2 2s 300ms infinite;
+  z-index: 10;
+  top: 43.75%;
+  left: 43.75%;
+  width: 500px;
+  height: 500px;
+  animation-delay: 1s;
+}
+.svg3 {
+  z-index: 9;
+  top: 20px;
+  left: 40px;
+  width: 500px;
+  height: 500px;
+}
+.svg4 {
+  z-index: 8;
+  width: 500px;
+  height: 500px;
+}
+.svg5 {
+  z-index: 7;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 10%;
+}
+@keyframes rotate1 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate2 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+}
+svg {
+  transform-box: fill-box;
+}
+path {
+  transform-origin: center;
+  transform: rotate(360deg);
+  transition: transform 1s ease-in;
+}

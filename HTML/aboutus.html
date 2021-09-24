@@ -190,28 +190,123 @@
           <h1>about us</h1>
         </div>
       </div>
-      
-        <section class="aboutus_main_section">
-          <section class="aboutus_section">
-            <h2>explore together</h2>
-            <p>Come join us at the    Community Science Museum where  we’re committed to making science accessible to all.
-              Over the course of human history, science has developed from our early understanding of fire, wind, water, and earth to exploring everything from galaxies far away to the very building blocks of life itself.
-              The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and perhaps even ignite a lifelong passion to continue the exploration of the world around us.
-              We believe science should not be confined to the textbook, but brought to live through exhibits. This is why we have over 1000 different exhibits on the many varied subjects of science to explore. Many of these exhibits are designed for you to interact with and play around to see science come to life (apart from the dinosaur exhibits – they only come to life at night when everyone’s gone home).</p>
+
+      <section class="aboutus_main_section">
+        <section class="explore_together_section">
+          <h2 class="extra_big">explore together</h2>
+
+          <div class="img_frame">
+            <img
+              src="/Images/scott-webb-102825.jpg"
+              alt="multi colored wall with a museum sign on it "
+            />
+          </div>
+          <p>
+            Come join us at the Community Science Museum where we’re committed
+            to making science accessible to all. Over the course of human
+            history, science has developed from our early understanding of fire,
+            wind, water, and earth to exploring everything from galaxies far
+            away to the very building blocks of life itself. The aim of our
+            museum is to create a space where everyone can experience the
+            wonders of our discoveries and perhaps even ignite a lifelong
+            passion to continue the exploration of the world around us. We
+            believe science should not be confined to the textbook, but brought
+            to live through exhibits. This is why we have over 1000 different
+            exhibits on the many varied subjects of science to explore. Many of
+            these exhibits are designed for you to interact with and play around
+            to see science come to life (apart from the dinosaur exhibits – they
+            only come to life at night when everyone’s gone home).
+          </p>
+        </section>
+        <div class="split">
+          <section class="explore_section">
             <h2>Explore</h2>
             <h3>for kids</h3>
-            <p>Are you a young person looking to learn more about science? Come on down to our museum, there’s plenty to see and do.
-              You can learn about Newtonian physics from our bumper swing, or why not travel back in time and meet our resident Woolly Mammoth? Our exhibits are designed to be accessible for interested minds, so make sure you come ready to learn and explore.
-              We also have the Young Stars club which meets once a week on a Saturday between 10:00 and 13:00 where you’ll get to explore and experiment with our team of experts.
-              During the school holidays we run special holiday clubs where you can join other children your age to go on a journey of discovery. Each holiday we pick a new theme to explore. To find out more about the holiday club and how you can join, send us a message.</p>
-            <h3>For teachers</h3>
-            <p>As a community-driven museum, we want to work with schools to create places of learning and exploring. Our team are on hand to give your students guided tours of the museum, teach them in our learning laboratory, and provide great video presentations that will excite and inspire them.
-              Please get in touch with us here to find out more about our facilities and to arrange a time to bring your students through for a visit.</p>
+            <p>
+              Are you a young person looking to learn more about science? Come
+              on down to our museum, there’s plenty to see and do. You can learn
+              about Newtonian physics from our bumper swing, or why not travel
+              back in time and meet our resident Woolly Mammoth? Our exhibits
+              are designed to be accessible for interested minds, so make sure
+              you come ready to learn and explore. We also have the Young Stars
+              club which meets once a week on a Saturday between 10:00 and 13:00
+              where you’ll get to explore and experiment with our team of
+              experts. During the school holidays we run special holiday clubs
+              where you can join other children your age to go on a journey of
+              discovery. Each holiday we pick a new theme to explore. To find
+              out more about the holiday club and how you can join, send us a
+              message.
+            </p>
+            <div>
+              <h3>For teachers</h3>
+              <p>
+                As a community-driven museum, we want to work with schools to
+                create places of learning and exploring. Our team are on hand to
+                give your students guided tours of the museum, teach them in our
+                learning laboratory, and provide great video presentations that
+                will excite and inspire them. Please get in touch with us here
+                to find out more about our facilities and to arrange a time to
+                bring your students through for a visit.
+              </p>
+            </div>
+            <div>
               <h3>researchers</h3>
-              <p>Are you looking to get involved with our team of researchers and academics? Our museum offers various ways for you to use our resources and contribute towards them. We have online records, laboratory space, and a working relationship with a number of universities around the country.</p>
+              <p>
+                Are you looking to get involved with our team of researchers and
+                academics? Our museum offers various ways for you to use our
+                resources and contribute towards them. We have online records,
+                laboratory space, and a working relationship with a number of
+                universities around the country.
+              </p>
+            </div>
+            <section class="contact_form">
+              <h2>contact</h2>
+              <form action="aboutus.html" method="get">
+                <div>
+                  <label for="first name">First Name</label>
+                  <input
+                    type="text"
+                    name="first name"
+                    id="first name"
+                    placeholder="First Name"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="last name">Last Name</label>
+                  <input
+                    type="text"
+                    name="last name"
+                    id="last name"
+                    placeholder="last Name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="message" class="message_text">message</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    class="message"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit_btn">Send</button>
+              </form>
+            </section>
           </section>
-          <div class="main_aboutus_right">
-          <section class="location_section">
+          <section class="general_info_section">
             <h2>Location</h2>
             <p>The museum is located at Mølleparken 4, 0459 Oslo.</p>
             <iframe
@@ -223,40 +318,26 @@
               loading="lazy"
               class="google_map"
             ></iframe>
-        </section>
-        <section class="general_info_section">
-          <h2>Accessibility</h2>
-          <p>The museum has wheelchair accessibility ramps. It also has audio guides and braille display signs for the visually impaired.</p>
-          <h2>food and drink</h2>
-          <p>There is a café attached to the museum where you can get light lunches, soft drinks, coffee, snacks and more.</p>
-          <h2>shop</h2>
-          <p>Our shop offers a range of memorabilia from the museum as well as great gifts and activity packs that allow you to continue to explore science even after you’ve left the museum.</p>
-          <section class="contact_form">
-          <h2>contact</h2>
-            <form action="aboutus.html" method="get">
-              
-              <div>
-                <label for="first name">First Name</label>
-                <input type="text" name="first name" id="first name" placeholder="First Name" required/>
-              </div>
 
-              <div>
-                <label for="last name">Last Name</label>
-                <input type="text" name="last name" id="last name"placeholder="last Name" required>
-              </div>
-              <div>
-              <label for="email">Email</label>
-              <input type="text" name="email"
-              id="email" placeholder="Email" required>
-              </div>
-              <div>
-              <label for="message" class="message_text">message</label>
-              <textarea name="message" id="message" class="message" required></textarea></div>
-              <button type="submit" class="submit_btn">Send</button>
-            </form>
-        </section>
-          </div>
-        </section>
+            <h2>Accessibility</h2>
+            <p>
+              The museum has wheelchair accessibility ramps. It also has audio
+              guides and braille display signs for the visually impaired.
+            </p>
+            <h2>food and drink</h2>
+            <p>
+              There is a café attached to the museum where you can get light
+              lunches, soft drinks, coffee, snacks and more.
+            </p>
+            <h2>shop</h2>
+            <p>
+              Our shop offers a range of memorabilia from the museum as well as
+              great gifts and activity packs that allow you to continue to
+              explore science even after you’ve left the museum.
+            </p>
+          </section>
+        </div>
+      </section>
       <div class="sticky_item">
         <img
           src="/Images/footer-hero.jpg"
