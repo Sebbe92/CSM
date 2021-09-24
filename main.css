@@ -159,13 +159,13 @@ li a {
   display: none;
 }
 .hamburger_menu_overlay {
+  z-index: -1;
   width: 200px;
-
   position: absolute;
   top: 100px;
   left: 0%;
   opacity: 0;
-  transition: opacity 200ms ease-out, transform 200ms ease-out;
+  transition: opacity 200ms ease-out, transform 2000ms ease-out;
   transform: translateY(-10px);
 }
 .hamburger_menu svg {
@@ -174,10 +174,12 @@ li a {
 input[type="checkbox"] {
   display: none;
 }
-input[type="checkbox"]:checked ~ .hamburger_menu_overlay {
+#hamburger_checkbox[type="checkbox"]:checked ~ .hamburger_menu_overlay {
+  z-index: 5;
   opacity: 1;
   transform: translateY(0);
   z-index: 10;
+  transition: opacity 200ms ease-out, transform 2000ms ease-out;
 }
 
 /*logo*/
@@ -499,6 +501,12 @@ form div {
   display: flex;
   justify-content: space-around;
 }
+.support_overlay {
+  display: none;
+}
+#support_overlay_checkbox:checked ~ .support_overlay {
+  display: block;
+}
 /* footer */
 .sticky_item {
   position: sticky;
@@ -541,6 +549,7 @@ footer .nav_cta {
 }
 
 @media (max-width: 920px) {
+  /*FONTS*/
   h2 {
     font-size: 1.5em;
     margin-bottom: 5px;
@@ -552,20 +561,24 @@ footer .nav_cta {
     font-size: 00.8em;
     margin-bottom: 20px;
   }
-  .main_section {
-    padding: 0;
-  }
 
+  /*HEADER*/
   header nav {
     display: none;
   }
   .hamburger_menu {
     display: block;
   }
-
+  /*LOGO*/
   .home_cta_logo {
     margin-left: auto;
   }
+  /*MAIN*/
+  .main_section {
+    padding: 0;
+  }
+  /*HOME*/
+  /*EXHIBITIONS*/
   .exhibition_container img {
     max-width: 100%;
   }
@@ -578,6 +591,7 @@ footer .nav_cta {
     max-height: 700px;
     width: 300px;
   }
+  /*EVENT*/
   .event_container {
     width: 100%;
   }
@@ -591,10 +605,7 @@ footer .nav_cta {
   .upcomming .event_info_box {
     position: relative;
   }
-  .top_section {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  /*ABOUT*/
   .google_map {
     max-width: 100%;
   }
@@ -604,15 +615,12 @@ footer .nav_cta {
   .aboutus_main_section .img_frame img {
     object-position: 0 -200px;
   }
+  /*GET INVOLVED*/
+  /*ARTICLE*/
+  /*GLOBAL*/
 }
 @media (max-width: 500px) {
-  .home_cta_logo h1,
-  .home_cta_logo h3 {
-    display: none;
-  }
-  .home_cta_logo {
-    width: fit-content;
-  }
+  /*FONTS*/
   .container h2 {
     font-size: 1.6em;
   }
@@ -622,23 +630,27 @@ footer .nav_cta {
   .extra_big {
     font-size: 10vw;
   }
-  .home_cta_logo {
-    margin: auto;
-  }
   .background_overlay p {
     font-size: 4vw;
   }
+  /*HEADER*/
+  /*LOGO*/
+  .home_cta_logo h1,
+  .home_cta_logo h3 {
+    display: none;
+  }
+  .home_cta_logo {
+    width: fit-content;
+  }
+
+  .home_cta_logo {
+    margin: auto;
+  }
+  /*MAIN*/
+  /*HOME*/
   .content_section {
     overflow-x: scroll;
     overflow-y: hidden;
-  }
-  .info_container p {
-    width: 100%;
-  }
-
-  .sticky_item {
-    position: relative;
-    text-align: center;
   }
   .content_section {
     gap: 0;
@@ -647,12 +659,23 @@ footer .nav_cta {
   .container {
     margin: 0 10px;
   }
+  /*EXHIBITIONS*/
+  /*EVENTS*/
+  /*ABOUT*/
   .contact_form {
     width: 100%;
   }
-
   .aboutus_main_section .img_frame img {
     object-position: 0 0;
+  }
+  /*GET INVOLVED*/
+  /*GLOBAL*/
+  .info_container p {
+    width: 100%;
+  }
+  .sticky_item {
+    position: relative;
+    text-align: center;
   }
 }
 @media (max-width: 350px) {
