@@ -38,6 +38,9 @@ h2 {
   white-space: nowrap;
   text-transform: capitalize;
 }
+.getinvolved_info_section h2 {
+  font-size: 1em;
+}
 .extra_big {
   font-family: roboto-slab, serif;
   font-size: 3em;
@@ -58,6 +61,7 @@ textarea {
   font-size: 1em;
   padding: 10px;
   border-left: 2px black solid;
+  max-width: 700px;
 }
 .background_overlay p {
   color: white;
@@ -97,7 +101,10 @@ header,
 .aboutus_main_section,
 .event_info_box,
 .article_main_section,
-.main_getinvolved_section {
+.main_getinvolved_section,
+.volunteer_overlay,
+.internship_overlay,
+.support_overlay {
   background-color: white;
 }
 
@@ -217,7 +224,7 @@ input[type="checkbox"] {
   justify-content: space-around;
 }
 
-/*content section*/
+/*HOME*/
 .content_section {
   padding: 10px;
   width: 100%;
@@ -498,15 +505,96 @@ form div {
 }
 /*get involved*/
 .main_getinvolved_section {
-  display: flex;
-  justify-content: space-around;
+  width: 100%;
+  display: grid;
 }
+.getinvolved_info_section {
+  height: fit-content;
+  display: flex;
+  position: relative;
+  padding: 10px;
+  justify-content: left;
+}
+.main_getinvolved_section .img_frame {
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  margin: auto;
+}
+.main_getinvolved_section img {
+  width: 600px;
+  margin: auto;
+  object-fit: contain;
+  object-position: -100px -100px;
+}
+.getinvolved_info_section label h2 {
+  border-right: 2px black solid;
+  padding: 5px 15px;
+}
+.overlay_fallback {
+}
+.support_container {
+  height: fit-content;
+  width: 1200px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.volunteer_overlay,
+.internship_overlay,
 .support_overlay {
+  box-shadow: -2px 3px 3px rgba(0, 0, 0, 0.537);
+  height: fit-content;
+  width: 1200px;
+  padding: 10px;
+  top: 50px;
+  left: 10px;
+  position: absolute;
   display: none;
+  grid-template-columns: 1fr 3fr;
+}
+
+.text_section {
+  max-width: 700px;
+  margin: auto 50px;
+}
+.text_section h2 {
+  font-size: 2em;
+}
+
+#support_overlay_checkbox:checked ~ label h2,
+#volunteer_overlay_checkbox:checked ~ label h2,
+#internship_overlay_checkbox:checked ~ label h2 {
+  background-color: var(--bg-color);
+  box-shadow: -2px 3px 3px rgba(0, 0, 0, 0.537);
+}
+
+#support_overlay_checkbox:checked ~ label {
+  z-index: 6;
+}
+#volunteer_overlay_checkbox:checked ~ label {
+  z-index: 4;
+}
+#volunteer_overlay_checkbox:checked ~ label {
+  z-index: 2;
+}
+#volunteer_overlay_checkbox:checked ~ .volunteer_overlay,
+#internship_overlay_checkbox:checked ~ .internship_overlay,
+#support_overlay_checkbox:checked ~ .support_overlay {
+  display: grid;
+  background-color: var(--bg-color);
 }
 #support_overlay_checkbox:checked ~ .support_overlay {
-  display: block;
+  z-index: 1;
 }
+#volunteer_overlay_checkbox:checked ~ .volunteer_overlay {
+  z-index: 3;
+}
+
+#internship_overlay_checkbox:checked ~ .internship_overlay {
+  z-index: 5;
+}
+
 /* footer */
 .sticky_item {
   position: sticky;
@@ -633,6 +721,9 @@ footer .nav_cta {
   .background_overlay p {
     font-size: 4vw;
   }
+  .getinvolved_info_section h2 {
+    font-size: 0.5em;
+  }
   /*HEADER*/
   /*LOGO*/
   .home_cta_logo h1,
@@ -679,6 +770,10 @@ footer .nav_cta {
   }
 }
 @media (max-width: 350px) {
+  .getinvolved_info_section label h2 {
+    font-size: 4vw;
+    padding: 0;
+  }
   .hamburger_menu_overlay ul {
     width: 100%;
   }
