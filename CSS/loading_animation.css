@@ -3,14 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+h1 {
+  font-family: roboto-slab, serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  font-size: 5vw;
+  text-transform: capitalize;
+  text-align: center;
+}
 body {
   text-align: center;
 }
 svg {
-  transform-box: fill-box;
+  width: 140%;
+  margin: 0 auto;
 }
-path {
-  transform-origin: center;
-  transform: rotate(360deg);
-  transition: transform 1s ease-in;
+.svg_frame {
+  width: 100%;
+  overflow: hidden;
+  max-width: 500px;
+  max-height: 500px;
+  margin: 0 auto;
 }
