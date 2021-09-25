@@ -35,7 +35,6 @@ h2 {
   font-style: bold;
   margin-bottom: 10px;
   text-align: center;
-  white-space: nowrap;
   text-transform: capitalize;
 }
 .getinvolved_info_section h2 {
@@ -48,7 +47,7 @@ h2 {
 h3,
 label {
   font-family: roboto, serif;
-  font-size: 1.5em;
+  font-size: 1em;
   font-style: bold;
   text-transform: capitalize;
   text-align: center;
@@ -60,11 +59,8 @@ textarea {
   font-style: normal;
   font-size: 1em;
   padding: 10px;
-  border-left: 2px black solid;
   max-width: 700px;
-}
-.background_overlay p {
-  color: white;
+  margin: 0 auto;
 }
 
 a {
@@ -88,8 +84,7 @@ body {
   background-size: cover;
   background-position: 50% 75%;
 }
-.background_overlay h1,
-.background_overlay p {
+.background_overlay h1 {
   background-color: rgba(0, 0, 0, 0.576);
 }
 /*WHITE*/
@@ -114,11 +109,6 @@ header,
   background-color: rgba(255, 255, 255, 0.152);
   backdrop-filter: blur(1px);
   backdrop-filter: brightness(20%);
-}
-.background_overlay p {
-  font-size: 1em;
-  text-align: center;
-  padding: 30px;
 }
 /*HEADER SPECIFIC styles*/
 header {
@@ -172,7 +162,7 @@ li a {
   top: 100px;
   left: 0%;
   opacity: 0;
-  transition: opacity 200ms ease-out, transform 2000ms ease-out;
+  transition: opacity 200ms ease-out, transform 400ms ease-out;
   transform: translateY(-10px);
 }
 .hamburger_menu svg {
@@ -186,27 +176,15 @@ input[type="checkbox"] {
   opacity: 1;
   transform: translateY(0);
   z-index: 10;
-  transition: opacity 200ms ease-out, transform 2000ms ease-out;
+  transition: opacity 200ms ease-out, transform 400ms ease-out;
 }
 
 /*logo*/
 .home_cta_logo {
-  width: fit-content;
+  width: 200px;
 }
-.main_logo {
-  display: grid;
-  grid-template-columns: 60% 40%;
-  justify-content: center;
-  align-items: center;
-}
-
-.home_cta_logo h3 {
-  margin-top: -15px;
-  font-size: 1em;
-}
-
 .home_cta_logo svg {
-  width: 70%;
+  width: 100%;
 }
 
 /*main sections*/
@@ -302,7 +280,6 @@ input[type="checkbox"] {
 }
 .item_overlay p {
   max-width: 80%;
-  margin: 0 auto;
 }
 .item_bottom_text {
   transition: transform 150ms ease-out;
@@ -356,6 +333,7 @@ input[type="checkbox"] {
 .event_container {
   width: 48%;
   position: relative;
+  min-width: 300px;
 }
 .upcomming {
   width: 100%;
@@ -388,7 +366,6 @@ input[type="checkbox"] {
   text-align: start;
   display: grid;
   justify-content: center;
-  margin-left: 20px;
 }
 .event_info_box h2 {
   font-size: 1.7em;
@@ -407,13 +384,13 @@ input[type="checkbox"] {
   text-align: start;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  text-align: center;
 }
 /*about us section*/
 .aboutus_main_section {
 }
 .explore_together_section p {
   max-width: 800px;
-  margin: 0 auto;
 }
 .explore_together_section,
 .explore_section,
@@ -442,7 +419,6 @@ input[type="checkbox"] {
 .contact_form {
   width: 90%;
   max-width: 500px;
-
   background-color: var(--sec-color);
   border-radius: 30px;
   padding: 20px;
@@ -475,33 +451,51 @@ form div {
 }
 /*article*/
 .article_main_section {
-  height: 1200px;
-  padding: 10px;
+  width: 100%;
+  padding: 50px;
 }
 .main_article {
-  margin: 20px;
+  width: 80%;
+  margin: 0 auto;
   padding: 40px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.597);
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .main_article .img_frame {
-  width: 30%;
+  width: 100%;
   overflow: hidden;
-  min-width: 450px;
+  margin: 0 auto;
 }
 .main_article .img_frame img {
   width: 100%;
   object-fit: contain;
 }
-.article_text {
-  width: 55%;
-  min-width: 450px;
+.other_articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
+.other_articles > * {
+  margin: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.597);
+}
+.other_articles img {
+  width: 100%;
+}
+.other_articles .img_frame {
+  width: 100%;
+  overflow: hidden;
+}
+.article_text {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .article_h1 {
   font-size: 3em;
   color: black;
-  background-color: white;
 }
 /*get involved*/
 .main_getinvolved_section {
@@ -557,9 +551,6 @@ form div {
 .text_section {
   max-width: 700px;
   margin: auto 50px;
-}
-.text_section h2 {
-  font-size: 2em;
 }
 
 #support_overlay_checkbox:checked ~ label h2,
@@ -647,9 +638,11 @@ footer .nav_cta {
   }
   p {
     font-size: 00.8em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
-
+  .event_container h2 {
+    font-size: 1em;
+  }
   /*HEADER*/
   header nav {
     display: none;
@@ -680,18 +673,14 @@ footer .nav_cta {
     width: 300px;
   }
   /*EVENT*/
-  .event_container {
-    width: 100%;
-  }
+
   .upcomming_tag {
     font-size: 5vw;
     border-radius: 2vw 0 2vw 0;
   }
-  .event_info_box div {
-    min-width: 0;
-  }
+
   .upcomming .event_info_box {
-    position: relative;
+    position: unset;
   }
   /*ABOUT*/
   .google_map {
@@ -705,6 +694,9 @@ footer .nav_cta {
   }
   /*GET INVOLVED*/
   /*ARTICLE*/
+  .article_main_section {
+    width: 100%;
+  }
   /*GLOBAL*/
 }
 @media (max-width: 500px) {
@@ -726,17 +718,6 @@ footer .nav_cta {
   }
   /*HEADER*/
   /*LOGO*/
-  .home_cta_logo h1,
-  .home_cta_logo h3 {
-    display: none;
-  }
-  .home_cta_logo {
-    width: fit-content;
-  }
-
-  .home_cta_logo {
-    margin: auto;
-  }
   /*MAIN*/
   /*HOME*/
   .content_section {
@@ -752,6 +733,10 @@ footer .nav_cta {
   }
   /*EXHIBITIONS*/
   /*EVENTS*/
+  .event_container {
+    min-width: 100px;
+    width: 100%;
+  }
   /*ABOUT*/
   .contact_form {
     width: 100%;
