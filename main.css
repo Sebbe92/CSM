@@ -17,7 +17,7 @@ body {
 }
 /*GLOBAL styles*/
 h1 {
-  font-family: roboto-slab, serif;
+  font-family: roboto-slab, Georgia, "Times New Roman", Times, serif;
   font-weight: 700;
   font-style: normal;
   color: white;
@@ -32,7 +32,7 @@ h1 {
   font-size: 4em;
 }
 h2 {
-  font-family: roboto, serif;
+  font-family: roboto, Arial, Helvetica, sans-serif;
   font-size: 2em;
   font-style: bold;
   margin-bottom: 10px;
@@ -43,7 +43,7 @@ h2 {
   font-size: 1em;
 }
 .extra_big {
-  font-family: roboto-slab, serif;
+  font-family: roboto-slab, Georgia, "Times New Roman", Times, serif;
   font-size: 3em;
 }
 h3,
@@ -56,7 +56,7 @@ label {
 }
 p,
 textarea {
-  font-family: roboto mono, serif;
+  font-family: roboto mono, Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 1em;
