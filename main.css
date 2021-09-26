@@ -612,17 +612,16 @@ footer .nav_cta {
   }
   /*HOME*/
   /*EXHIBITIONS*/
+  .exhibition_container {
+    display: block;
+    max-height: 700px;
+    width: 300px;
+  }
   .exhibition_container img {
     width: 100%;
   }
   .exhibition_container p {
-    font-size: 0.8em;
-  }
-  .exhibition_container {
-    display: grid;
-    height: fit-content;
-    max-height: 700px;
-    width: 300px;
+    font-size: 1em;
   }
   /*EVENT*/
 
