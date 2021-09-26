@@ -190,7 +190,6 @@ input[type="checkbox"] {
 .main_event_section,
 .aboutus_main_section {
   background-color: rgb(255, 255, 255);
-  gap: 10px;
   padding: 50px 10px;
   width: 100%;
   min-height: 100vh;
