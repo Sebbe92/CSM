@@ -317,8 +317,7 @@ input[type="checkbox"] {
 
 .exhibition_container img {
   width: 50%;
-  min-height: fit-content;
-  object-fit: fill;
+  object-fit: contain;
   background-color: black;
 }
 
