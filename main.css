@@ -303,9 +303,7 @@ input[type="checkbox"] {
 }
 
 /*exhibition*/
-.main_exhibition_section :nth-child(even) {
-  flex-direction: row-reverse;
-}
+
 .exhibition_container {
   max-height: 400px;
   max-width: 100%;
@@ -756,5 +754,8 @@ footer .nav_cta {
   }
   .container:hover {
     animation: img_bounce 350ms ease-out;
+  }
+  .main_exhibition_section :nth-child(even) {
+    flex-direction: row-reverse;
   }
 }
