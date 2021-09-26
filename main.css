@@ -12,7 +12,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  overflow-x: hidden;
+}
 /*GLOBAL styles*/
 h1 {
   font-family: roboto-slab, serif;
@@ -66,15 +68,11 @@ a {
   text-decoration: none;
   color: var(--font-color);
 }
-.event_info_box a {
-  font-family: roboto, serif;
-  font-size: 2em;
-  font-style: bold;
-  margin-bottom: 10px;
-  text-align: center;
-  white-space: nowrap;
-  text-transform: capitalize;
+
+a:hover h2 {
+  text-decoration: underline;
 }
+
 /*BACKGROUND*/
 body {
   background: url(Images/roberto-nickson-396152.jpg);
@@ -317,12 +315,14 @@ input[type="checkbox"] {
 }
 
 .exhibition_container img {
-  flex: 1;
-  min-width: 50%;
+  width: 50%;
+  min-height: fit-content;
   object-fit: fill;
   background-color: black;
 }
+
 .info_box {
+  margin: 0 auto;
   padding: 10px;
 }
 .info_box p {
@@ -369,6 +369,15 @@ input[type="checkbox"] {
 .event_info_box h2 {
   font-size: 1.7em;
   text-align: start;
+}
+.event_info_box a {
+  font-family: roboto, serif;
+  font-size: 2em;
+  font-style: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: capitalize;
 }
 .upcomming h2 {
   font-size: 2em;
@@ -604,7 +613,7 @@ footer .nav_cta {
   /*HOME*/
   /*EXHIBITIONS*/
   .exhibition_container img {
-    max-width: 100%;
+    width: 100%;
   }
   .exhibition_container p {
     font-size: 0.8em;
