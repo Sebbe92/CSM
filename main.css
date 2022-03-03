@@ -21,7 +21,7 @@ h1 {
   font-weight: 700;
   font-style: normal;
   color: white;
-  font-size: 10vw;
+  font-size: 3em;
   text-transform: capitalize;
   text-align: center;
 }
@@ -35,7 +35,7 @@ h2 {
   font-family: roboto, Arial, Helvetica, sans-serif;
   font-size: 2em;
   font-style: bold;
-  margin-bottom: 10px;
+  margin: 20px 0 10px 0;
   text-align: center;
   text-transform: capitalize;
 }
@@ -53,6 +53,7 @@ label {
   font-style: bold;
   text-transform: capitalize;
   text-align: center;
+  margin: 20px 0 5px 0;
 }
 p,
 textarea {
@@ -286,6 +287,9 @@ input[type="checkbox"] {
   z-index: 2;
   height: fit-content;
 }
+.item_bottom_text h2 {
+  margin: 0;
+}
 /*info section*/
 .info_section {
   margin: 40px;
@@ -305,6 +309,7 @@ input[type="checkbox"] {
 /*exhibition*/
 
 .exhibition_container {
+  height: fit-content;
   max-height: 400px;
   max-width: 100%;
   display: flex;
@@ -323,16 +328,20 @@ input[type="checkbox"] {
 
 .info_box {
   margin: 0 auto;
-  padding: 10px;
+  padding: 15px;
 }
 .info_box p {
   font-size: 1em;
+}
+.info_box h2 {
+  margin-top: 0;
 }
 /*event section*/
 .event_container {
   width: 48%;
   position: relative;
   min-width: 300px;
+  margin: 10px;
 }
 .upcomming {
   width: 100%;
@@ -614,7 +623,7 @@ footer .nav_cta {
   /*EXHIBITIONS*/
   .exhibition_container {
     display: block;
-    max-height: 700px;
+    max-height: fit-content;
     width: 300px;
   }
   .exhibition_container img {
@@ -633,6 +642,7 @@ footer .nav_cta {
   .upcomming .event_info_box {
     position: unset;
   }
+
   /*ABOUT*/
   .google_map {
     max-width: 100%;
@@ -652,6 +662,9 @@ footer .nav_cta {
 }
 @media (max-width: 500px) {
   /*FONTS*/
+  h1 {
+    font-size: 2em;
+  }
   .container h2 {
     font-size: 1.6em;
   }
@@ -666,9 +679,6 @@ footer .nav_cta {
   }
   .getinvolved_info_section h2 {
     font-size: 0.5em;
-  }
-  .background_overlay {
-    display: none;
   }
   /*HEADER*/
   /*LOGO*/
