@@ -272,6 +272,9 @@ input[type="checkbox"] {
   top: -100%;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background-color: white;
   overflow: hidden;
   transition: transform 250ms linear 300ms;
@@ -412,6 +415,9 @@ input[type="checkbox"] {
 .explore_together_section,
 .explore_section,
 .general_info_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.597);
   padding: 20px;
   margin: 20px;
@@ -421,8 +427,7 @@ input[type="checkbox"] {
 }
 .explore_section {
 }
-.general_info_section {
-}
+
 .aboutus_main_section .img_frame {
   height: 300px;
   overflow: hidden;
